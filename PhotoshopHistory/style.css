@@ -8,12 +8,16 @@ body {
     background-repeat: no-repeat;
     background-size: cover;
     height: 350px;
-    text-align: center;
+    position: relative;
 }
 
 .cont-head .cont-tit {
     font-size: 9px;
     color: #fff;
+    position: absolute;
+    left: 50%;
+    bottom: 10px;
+    transform: translate(-50%, -50%);
 }
 
 .cont-head .cont-tit .big-txt {
@@ -24,7 +28,7 @@ body {
 .cont-main {
     display: flex;
     justify-content: center;
-    padding: 20px 0 40px 0;
+    padding: 50px 0 70px 0;
     position: relative;
     overflow: hidden;
 }
@@ -35,7 +39,7 @@ body {
     height: 1700px;
     background-color: #1c90ff;
     position: absolute;
-    top: 100px;
+    top: 130px;
 }
 
 .cont-main .history .his-item {
@@ -43,6 +47,43 @@ body {
     background-color: #111111;
     border-radius: 10px;
     padding: 0 20px;
+    position: relative;
+}
+
+.his-item::before {
+    content: '';
+    background-image: url(images/1.png);
+    background-size: contain;
+    width: 70px;
+    height: 70px;
+    position: absolute;
+    top: -40px;
+}
+
+.his-item::after {
+    content: '';
+    background-color: #222222;
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    border: 2px solid #1c90ff;
+    position: absolute;
+    right: -31px;
+    bottom: 80px;
+    z-index: 10;
+}
+
+.his-item:nth-child(2n):after {
+    content: '';
+    background-color: #222222;
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    border: 2px solid #1c90ff;
+    position: absolute;
+    left: -31px;
+    bottom: 80px;
+    z-index: 10;
 }
 
 .history .his-item:nth-child(2n) {
@@ -50,6 +91,7 @@ body {
 }
 
 .history .year {
+    text-align: right;
     font-size: 50px;
     font-weight: 700;
     color: #1c90ff;
