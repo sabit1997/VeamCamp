@@ -1,0 +1,72 @@
+body {
+    background-color: #222222;
+}
+
+/* header */
+.cont-head {
+    background-image: url(images/cover.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 350px;
+    text-align: center;
+}
+
+.cont-head .cont-tit {
+    font-size: 9px;
+    color: #fff;
+}
+
+.cont-head .cont-tit .big-txt {
+    font-size: 22px;
+}
+
+/* main */
+.cont-main {
+    display: flex;
+    justify-content: center;
+    padding: 20px 0 40px 0;
+    position: relative;
+    overflow: hidden;
+}
+
+.cont-main::after {
+    content: '';
+    width: 2px;
+    height: 1700px;
+    background-color: #1c90ff;
+    position: absolute;
+    top: 100px;
+}
+
+.cont-main .history .his-item {
+    width: 350px;
+    background-color: #111111;
+    border-radius: 10px;
+    padding: 0 20px;
+}
+
+.history .his-item:nth-child(2n) {
+    margin-left: 400px;
+}
+
+.history .year {
+    font-size: 50px;
+    font-weight: 700;
+    color: #1c90ff;
+    padding-top: 15px;
+}
+
+.history .version {
+    font-size: 16px;
+    color: #cfcfcf;
+    margin-top: 5px;
+}
+
+.history .update {
+    margin-top: 15px;
+    padding: 15px;
+    border-radius: 20px 20px 0 0;
+    background-color: #000;
+    font-size: 9px;
+    color: #6c6c6c;
+}
