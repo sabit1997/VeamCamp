@@ -36,7 +36,9 @@ body {
 .cont-main::after {
     content: '';
     width: 2px;
-    height: 1700px;
+    height: 100%;
+    margin-top: 0;
+    margin-bottom: 0;
     background-color: #1c90ff;
     position: absolute;
     top: 130px;
@@ -60,6 +62,34 @@ body {
     top: -40px;
 }
 
+.his-item.ver-2::before {
+    background-image: url(images/2.png);
+}
+
+.his-item.ver-3::before {
+    background-image: url(images/3.png);
+}
+
+.his-item.ver-4::before {
+    background-image: url(images/4.png);
+}
+
+.his-item.ver-5::before {
+    background-image: url(images/5.png);
+}
+
+.his-item.ver-6::before {
+    background-image: url(images/6.png);
+}
+
+.his-item.ver-cs::before {
+    background-image: url(images/cs.png);
+}
+
+.his-item.ver-cs2::before {
+    background-image: url(images/cs2.png);
+}
+
 .his-item::after {
     content: '';
     background-color: #222222;
@@ -69,7 +99,8 @@ body {
     border: 2px solid #1c90ff;
     position: absolute;
     right: -31px;
-    bottom: 80px;
+    bottom: 50%;
+    transform: translate(0 , 50%);
     z-index: 10;
 }
 
@@ -82,20 +113,25 @@ body {
     border: 2px solid #1c90ff;
     position: absolute;
     left: -31px;
-    bottom: 80px;
+    bottom: 50%;
+    transform: translate(0 , 50%);
     z-index: 10;
 }
 
 .history .his-item:nth-child(2n) {
     margin-left: 400px;
+    margin-top: -20px;
 }
 
-.history .year {
-    text-align: right;
+.history .his-item .year {
     font-size: 50px;
     font-weight: 700;
     color: #1c90ff;
     padding-top: 15px;
+}
+
+.history .his-item:nth-child(2n-1) .year {
+    text-align: right;
 }
 
 .history .version {
@@ -104,11 +140,36 @@ body {
     margin-top: 5px;
 }
 
+.history .his-item:nth-child(2n-1) .version {
+    text-align: right;
+}
+
 .history .update {
     margin-top: 15px;
-    padding: 15px;
+    padding: 15px 0 15px 20px;
     border-radius: 20px 20px 0 0;
     background-color: #000;
     font-size: 9px;
     color: #6c6c6c;
+}
+
+.history .update li {
+    position: relative;
+    margin-bottom: 7px;
+}
+
+.history .update li:last-child {
+    margin-bottom: 0px;
+}
+
+.history .update li::before {
+    content: '';
+    width: 5px;
+    height: 5px;
+    border-radius: 50%;
+    background-color: #6c6c6c;
+    position: absolute;
+    top: 50%;
+    left: -10px;
+    transform: translate(-50%, -50%);
 }
