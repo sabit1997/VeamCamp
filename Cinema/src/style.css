@@ -1,15 +1,20 @@
+@font-face {
+    font-family: '국립박물관문화재단클래식L';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_twelve@1.0/국립박물관문화재단클래식L.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
 body {
+    font-family: '국립박물관문화재단클래식L';
+    margin-top: 70px;
     display: flex;
     justify-content: center;
     background-color: #000;
 }
 
 .menu {
-    padding: 200px 80px 0 0;
-    background-image: url(images/pixar.png);
-    background-size: 180px;
-    background-repeat: no-repeat;
-    background-position: 50% top;
+    margin : 80px 20px 0 0;
 }
 
 .menu .menu-item {
@@ -27,12 +32,9 @@ body {
             rgba(20, 20, 20, 0.5) 40%,
             rgba(20, 20, 20, 0.75) 45%,
             rgba(20, 20, 20, 1) 50%
-        ), url(images/cover.png) no-repeat;
+        ), url(images/cover.jpg) no-repeat;
         background-size: contain;
         display: flex;
-}
-
-.movie-info .movie-desc-warp {
 }
 
 .movie-info .movie-desc-warp .movie-tit {
@@ -44,15 +46,21 @@ body {
 .movie-info .movie-desc-warp .movie-desc {
     font-size: 16px;
     color: #a0a0a0;
+    word-break: keep-all;
 }
 
 .movie-info .movie-desc-warp .movie-desc {
     margin-bottom: 10px;
 }
 
-/* 이미지부터 마크업 하겠음 너무 커 */
+.movie-desc-warp .genre,
+.movie-desc-warp .ratings,
+.movie-desc-warp .casts {
+    float: right;
+}
 
-.right-section .casts .img-item {
+.movie-info .casts .img-item {
     width: 50px;
+    height: 50px;
     border-radius: 50%;
 }
